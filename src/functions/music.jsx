@@ -25,7 +25,7 @@ const Music = () => {
           (
             <div>
               <div className='row'>
-                  <MusicPlayer stateFave={music.stateFave} id={music.id} music={music} musicSrc={music.Src} musicName={music.name} singerName={music.singerName} avatar={music.avatar} />
+                  <MusicPlayer id={music.id} music={music} musicSrc={music.Src} musicName={music.name} singerName={music.singerName} avatar={music.avatar} />
                   <RelatedMusic id={id} music={music}/>
                 </div>
             </div>

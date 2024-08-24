@@ -36,7 +36,7 @@ const RelatedMusic = ({ id }) => {
                                 <img
                                     src={m.avatar}
                                     className="img-fluid"
-                                    style={{ objectFit: 'cover', borderRadius: "5px" }}
+                                    style={{ objectFit: 'cover', borderRadius: "5px" ,  width: '100%', height: '200px' }}
                                     alt="singerPic"
                                 />
                                 <h6 className='mt-2 text-light fs-6 fs-md-5 fs-lg-4'>{m.name} - {m.singerName}</h6>

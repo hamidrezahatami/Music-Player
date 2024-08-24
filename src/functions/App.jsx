@@ -13,10 +13,36 @@ document.body.style = 'background : #000'
 const App = () => {
   const musicsContext = useContext(MusicsContext)
   const [isPlaying, setIsPlaying] = useState(false);
-  const [faved, setFaved] = useState([]);
-  const [liked, setLiked] = useState(false)
-  const [musics, setMusics] = useState([]);
+  const [musics, setMusics] = useState([
+    {
+      singerName: 'Mehdi Ahmadvand',
+      Src: '../audio/bazandeh.mp3',
+      avatar: '../assets/mehdi1.jpg',
+      name: 'Bazandeh',
+      id: 1 ,   } , 
+      {
+        singerName: 'Mehdi Ahmadvand',
+        Src: '../audio/Falsh.mp3',
+        avatar: '../assets/mehdi2.jpg',
+        name: 'Falsh',
+        id: 2,   
+      },
 
+      {
+        singerName: 'Mehdi Ahmadvand',
+        Src: '../audio/Sargijeh.mp3',
+        avatar: '../assets/mehdi3.jpg',
+        name: 'Sargijeh',
+        id: 3,   } , 
+
+        {
+          singerName: 'Mehdi Ahmadvand',
+          Src: '../audio/Eshtebah.mp3',
+          avatar: '../assets/mehdi4.jpg',
+          name: 'Eshtebah',
+          id: 4,   
+        }
+  ]);
 
   useEffect(() => {
     const receiveArray = localStorage.getItem('musicList');
@@ -53,9 +79,9 @@ const App = () => {
   function handleAdd() {
     const newSong = {
       singerName: 'Mehdi Ahmadvand',
-      Src: '../audio/bazandeh.mp3',
-      avatar: '../assets/mehdi3.jpg',
-      name: 'Bazandeh',
+      Src:  '../audio/Eshghe-Aval.mp3' ,
+      avatar: '../assets/mehdi5.jpg',
+      name: 'Eshghe Aval',
       id: musics.length + 1,   
     };
     setMusics([...musics, newSong]);

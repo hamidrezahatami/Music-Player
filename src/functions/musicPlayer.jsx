@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import MusicsContext from '../context/MusicsContext';
 import "../styles/AudioPlayer.css";
 
-const MusicPlayer = ({ id, music, musicSrc, singerName, avatar, musicName, stateFave }) => {
+const MusicPlayer = ({ id, music, musicSrc, singerName, avatar, musicName }) => {
     const musicContext = useContext(MusicsContext);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
@@ -105,7 +105,7 @@ const MusicPlayer = ({ id, music, musicSrc, singerName, avatar, musicName, state
         <div className='player-card'>
             <div className="row">
                 <div className="col-12 col-md-4">
-                    <img src={avatar} style={{objectFit: 'fill', width: '100%', height: 'auto', borderRadius: "5px"}} alt="singerPic" />
+                    <img src={avatar} style={{objectFit: 'cover', width: '100%', height: '200px', borderRadius: "5px"}} alt="singerPic" />
                 </div>
                 <div id='musicInfo' className="col-12 col-md-8 text-light p-5">
                     <div>{singerName}</div>
